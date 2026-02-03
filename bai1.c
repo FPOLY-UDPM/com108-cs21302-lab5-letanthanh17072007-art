@@ -1,29 +1,40 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
- *****************************************************************************/
-
-//  BÀI 1: XÂY DỰNG CHƯƠNG TRÌNH TÌM GIÁ TRỊ LỚN NHẤT TRONG 3 SỐ  
-//  Input: Nhập từ bàn phím 3 số bất kỳ 
-//  Output: Xuất ra màn hình số lớn nhất trong 3 số 
-//  Hướng dẫn: Xây dựng hàm tìm giá trị lớn nhất trong 3 số. Hàm có giá trị trả về mà 
-//  giá trị lớn nhất giữa 3 số 
-
+ * Họ và tên: [Lê Tấn Thành]
+ * MSSV:      [PS48491]
+ * Lớp:       [COM108-C21302]
+ ******************************************************************************/
 #include <stdio.h>
 
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
+// Tạo hàm tìm số lớn nhất
+int timMax(int a, int b, int c) {
+    int max = a; // Giả sử a là số lớn nhất
+
+    if (b > max) {
+        max = b;
+    }
+    if (c > max) {
+        max = c;
+    }
+
+    return max;
+}
 
 int main() {
+    int n1, n2, n3;
 
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    // Nhập từ bàn phím 3 số bất kỳ
+    printf("Nhập số thứ nhất: ");
+    scanf("%d", &n1);
+    printf("Nhập số thứ hai: ");
+    scanf("%d", &n2);
+    printf("Nhập số thứ ba: ");
+    scanf("%d", &n3);
+
+    // Gọi hàm trong hàm main
+    int soMax = timMax(n1, n2, n3);
+
+    // Xuất ra màn hình
+    printf("Giá trị lớn nhất trong 3 số là: %d\n", soMax);
+
     return 0;
 }
